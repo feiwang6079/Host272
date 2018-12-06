@@ -56,19 +56,21 @@
         <ul class="sidebar-menu" id="nav-accordion">
 
           <li class="mt">
-            <a class="active" href="allcompanies.php">
+            <a  href="allcompanies.php">
               <i class="fa fa-dashboard"></i>
               <span>All Companies</span>
               </a>
           </li>
-          <li class="sub-menu">
-            <a href="javascript:;">
-              <i class="fa fa-desktop"></i>
+          
+          
+           <li class="sub-menu">
+            <a class="active" href="javascript:;">
+              <i class="fa fa-book"></i>
               <span>Product List</span>
               </a>
             <ul class="sub">
-              <li><a href="general.html">Most Visited</a></li>
-              <li><a href="buttons.html">Top Review</a></li>
+              <li class="active"><a href="mostvisit.php">Most Visit</a></li>
+              <li><a href="bestreview.php">Top Review</a></li>
             </ul>
           </li>
           
@@ -84,21 +86,50 @@
     <!--main content start-->
     <section id="main-content">
       <section class="wrapper site-min-height">
-        <h3><i class="fa fa-angle-right"></i> All Products</h3>
+        <h3><i class="fa fa-angle-right"></i> The Most Visited Products</h3>
         <div class="row mt">
           <div class="col-lg-12">
+          
+          
+          
+          <?php 
+
+          // 创建连接
+          $conn = mysqli_connect("db-30bemv1qn.aliwebs.com", "30bemv1qn", "123456", "30bemv1qn");
+          
+          // 检测连接
+          if (!$conn) {
+              die("Connection failed: " . mysqli_connect_error());
+          }
+
+$sql = "select * from products order by product_visit desc limit 0, 5";
+$result = mysqli_query($conn, $sql);
+while($row = mysqli_fetch_assoc($result))
+{
+    $productName = $row['product_name'];
+    
+    echo "<br><a href=\"fivehighrate.php\"> $productName</a><br>
+                <hr>";
+//     echo '<img src="img/pro'.$productImgId.'.png"'.' alt="service image" >';
+//     echo "<a href=\"productDescription.php?product=$productId\"><img src=\"img/pro$productImgId.png\">";
+//     echo '<br>';
+//     echo "Product :".$row['product_name']."</a>"."<br><br>";
+    
+}
+
+?>
             
-        <br><a href="fivehighrate.php"> Hot Pot Party(siyi's company)</a><br>
-                <hr>
+<!--         <br><a href="fivehighrate.php"> Hot Pot Party(siyi's company)</a><br> -->
+<!--                 <hr> -->
                 
-		<br><a href="mostfive.php"> Taylor's Apartments(min's company)</a><br>
-        		<hr>
+<!-- 		<br><a href="mostfive.php"> Taylor's Apartments(min's company)</a><br> -->
+<!--         		<hr> -->
         		
-       	<br><a href="mostfive.php"> Computer products(fei's company)</a><br>
-        		<hr>
+<!--        	<br><a href="mostfive.php"> Computer products(fei's company)</a><br> -->
+<!--         		<hr> -->
         		
-        <br><a href="mostfive.php"> Chlorophytainc(wai's company)</a><br>
-        		<hr>
+<!--         <br><a href="mostfive.php"> Chlorophytainc(wai's company)</a><br> -->
+<!--         		<hr> -->
             
           </div>
         </div>
