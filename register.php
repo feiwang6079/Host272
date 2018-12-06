@@ -36,15 +36,19 @@
       *********************************************************************************************************************************************************** -->
   <div id="login-page">
     <div class="container">
-      <form class="form-login" action="login.php" method="POST">
-        <h2 class="form-login-heading">sign in now</h2>
+      <form class="form-login" action="register.php" method="POST">
+        <h2 class="form-login-heading">Register now</h2>
         <div class="login-wrap">
           <?php include('errors.php'); ?>
           <input type="text" class="form-control" placeholder="Username" autofocus name="username">
           <br>
-          <input type="password" class="form-control" placeholder="Password" name="password">
+          <input type="text" class="form-control" placeholder="Email" autofocus name="email">
+          <br>
+          <input type="password" class="form-control" placeholder="Password" name="password_1">
           <br />
-          <button class="btn btn-theme btn-block" href="login.php" type="submit" name="login_user"><i class="fa fa-lock"></i> SIGN IN</button>
+          <input type="password" class="form-control" placeholder="Retype Password" name="password_2">
+          <br />
+          <button class="btn btn-theme btn-block" href="index.html" type="submit" name="reg_user"><i class="fa fa-pencil"></i> Register</button>
           <hr>
           <div class="login-social-link centered">
             <p>or you can sign in via your social network</p>
@@ -52,14 +56,14 @@
             
           </div>
           <div class="registration">
-            Don't have an account yet?<br/>
-            <a class="" href="register.php">
-              Create an account
+            Have an account already?<br/>
+            <a class="" href="login.php">
+              Log in Here!
               </a>
           </div>
         </div>
         <!-- Modal -->
-        
+  
         <!-- modal -->
       </form>
     </div>
