@@ -48,7 +48,7 @@
           <br />
           <input type="password" class="form-control" placeholder="Retype Password" name="password_2">
           <br />
-          <button class="btn btn-theme btn-block" href="index.html" type="submit" name="reg_user"><i class="fa fa-pencil"></i> Register</button>
+          <button class="btn btn-theme btn-block" type="submit" name="reg_user"><i class="fa fa-pencil"></i> Register</button>
           <hr>
           <div class="login-social-link centered">
             <p>or you can sign in via your social network</p>
@@ -75,7 +75,7 @@
   <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
   <script type="text/javascript" src="lib/jquery.backstretch.min.js"></script>
   <script>
-    $.backstretch("img/bg.jpg", { //$.backstretch("img/login-bg.jpg", {
+    $.backstretch("img/bg1.jpg", { //$.backstretch("img/login-bg.jpg", {
       speed: 500
     });
   </script>
