@@ -44,7 +44,7 @@
           <br>
           <input type="password" class="form-control" placeholder="Password" name="password">
           <br />
-          <button class="btn btn-theme btn-block" href="login.php" type="submit" name="login_user"><i class="fa fa-lock"></i> SIGN IN</button>
+          <button class="btn btn-theme btn-block" type="submit" name="login_user"><i class="fa fa-lock"></i> SIGN IN</button>
           <hr>
           <div class="login-social-link centered">
             <p>or you can sign in via your social network</p>
@@ -71,7 +71,7 @@
   <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
   <script type="text/javascript" src="lib/jquery.backstretch.min.js"></script>
   <script>
-    $.backstretch("img/bg.jpg", { //$.backstretch("img/login-bg.jpg", {
+    $.backstretch("img/bg1.jpg", { //$.backstretch("img/login-bg.jpg", {
       speed: 500
     });
   </script>
