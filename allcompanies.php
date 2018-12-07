@@ -41,7 +41,7 @@
         <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
       </div>
       <!--logo start-->
-      <a href="#" class="logo"><b>Computer<span>  products</span></b></a>
+      <a href="#" class="logo"><b>281 Team<span>  Host Website</span></b></a>
       <!--logo end-->
 
     </header>
@@ -95,13 +95,13 @@
         <div class="row mt">
           <div class="col-lg-12">
             
-        <br><a href="fivehighrate.php"> Hot Pot Party(siyi's company)</a><br>
+        <br><a href="http://www.peanutchoco.com"> Hot Pot Party(siyi's company)</a><br>
                 <hr>
                 
-		<br><a href="mostfive.php"> Taylor's Apartments(min's company)</a><br>
+		<br><a href="htt://www.mindong.tech"> Taylor's Apartments(min's company)</a><br>
         		<hr>
         		
-       	<br><a href="mostfive.php"> Computer products(fei's company)</a><br>
+       	<br><a href="http://www.feiwang.tech"> Computer products(fei's company)</a><br>
         		<hr>
         		
         <br><a href="mostfive.php"> Chlorophytainc(wai's company)</a><br>
