@@ -74,6 +74,13 @@
             </ul>
           </li>
           
+          <li> 
+            <a  href="tracking.php">
+              <i class="fa fa-dashboard"></i>
+              <span>Tracking</span>
+              </a>
+          </li>
+          
          
         </ul>
         <!-- sidebar menu end-->
