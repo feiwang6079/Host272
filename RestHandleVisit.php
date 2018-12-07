@@ -42,7 +42,7 @@ if (mysqli_query($db, $sql))
             values('$productName', '$userId', '$productUrl', '$companyName')";
     if(mysqli_query($db, $sql_track))
     {
-        
+        echo "isFinish";
     }
     else
     {

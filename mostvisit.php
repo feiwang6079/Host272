@@ -94,21 +94,16 @@
           
           <?php 
 
-          // 创建连接
-          $conn = mysqli_connect("db-30bemv1qn.aliwebs.com", "30bemv1qn", "123456", "30bemv1qn");
-          
-          // 检测连接
-          if (!$conn) {
-              die("Connection failed: " . mysqli_connect_error());
-          }
+include 'config.php';
 
-$sql = "select * from products order by product_visit desc limit 0, 5";
-$result = mysqli_query($conn, $sql);
+$sql = "select * from market_visit order by product_visit desc limit 0, 5";
+$result = mysqli_query($db, $sql);
 while($row = mysqli_fetch_assoc($result))
 {
     $productName = $row['product_name'];
-    
-    echo "<br><a href=\"fivehighrate.php\"> $productName</a><br>
+    $url = $row['product_url'];
+    $name = $row['company_name'];
+    echo "<br><a href=\"$url\"> $productName ------$name</a><br>
                 <hr>";
 //     echo '<img src="img/pro'.$productImgId.'.png"'.' alt="service image" >';
 //     echo "<a href=\"productDescription.php?product=$productId\"><img src=\"img/pro$productImgId.png\">";
