@@ -32,7 +32,8 @@
 
 <body>
   <!-- facebook login-->
-  <div id="fb-root"></div>
+  
+  <!-- <div id="fb-root"></div> -->
   <!-- <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
@@ -41,23 +42,22 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script> -->
   <script>
-  (function(d, s, id) {
-    FB.init({
-      appId      : '735063520183061',
-      cookie     : true,  // 启用cookie
-      xfbml      : true,  // 解析此页面上的社交插件
-      version    : 'v2.8' // 使用图形api 2.8版本
-    });
-
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "https://connect.facebook.net/en_US/sdk.js";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
   window.fbAsyncInit = function() {
-    
-};
+    FB.init({
+      appId            : '735063520183061',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v3.2'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
 </script>
   <!-- **********************************************************************************************************************************************************
       MAIN CONTENT
@@ -78,15 +78,15 @@
           <br />
           <button class="btn btn-theme btn-block" type="submit" name="reg_user"><i class="fa fa-pencil"></i> Register</button>
           <hr>
-          <div class="login-social-link centered">
-            <p>or you can sign in via your social network</p>
-            <button class="btn btn-facebook" type="submit"><i class="fa fa-facebook"></i> Facebook</button>
-            <!-- <div class="fb-login-button" data-size="medium" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="true" id="logina"></div> -->
+          <!-- <div class="login-social-link centered">
+            <p>or you can sign in via your social network</p> -->
+            <!-- <button class="btn btn-facebook" type="submit"><i class="fa fa-facebook"></i> Facebook</button> -->
+             
             
-          </div>
+          <!-- </div> -->
           <div class="registration">
             Have an account already?<br/>
-            <a class="" href="login.php">
+            <a class="" href="index.php">
               Log in Here!
               </a>
           </div>
