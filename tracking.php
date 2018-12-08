@@ -41,7 +41,7 @@
         <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
       </div>
       <!--logo start-->
-      <a href="#" class="logo"><b>Computer<span>  products</span></b></a>
+      <a href="#" class="logo"><b>281 Team<span>  Host Website</span></b></a>
       <!--logo end-->
 
     </header>
@@ -56,7 +56,7 @@
         <ul class="sidebar-menu" id="nav-accordion">
 
           <li class="mt">
-            <a class="active" href="allcompanies.php">
+            <a  href="allcompanies.php">
               <i class="fa fa-dashboard"></i>
               <span>All Companies</span>
               </a>
@@ -67,9 +67,16 @@
               <span>Product List</span>
               </a>
             <ul class="sub">
-              <li><a href="general.html">Most Visited</a></li>
-              <li><a href="buttons.html">Top Review</a></li>
+              <li><a href="mostvisit.php">Most Visited</a></li>
+              <li><a href="bestreview.php">Top Review</a></li>
             </ul>
+          </li>
+          
+          <li> 
+            <a class="active" href="tracking.php">
+              <i class="fa fa-dashboard"></i>
+              <span>Tracking</span>
+              </a>
           </li>
           
          
@@ -87,18 +94,36 @@
         <h3><i class="fa fa-angle-right"></i> All Products</h3>
         <div class="row mt">
           <div class="col-lg-12">
+          
+        <?php 
+
+          include 'config.php';
+           
+          $sql = "select * from market_track order by time desc";
+          $result = mysqli_query($db, $sql);
+          while($row = mysqli_fetch_assoc($result))
+          {
+              $productName = $row['product_name'];
+//               $url = $row['product_url'];
+              $name = $row['company_name'];
+              $time = $row['time'];
+              echo "<br> you watch $productName "."of ".$name." at ".$time."</a><br><hr>";
+              
+          }
+
+?>
             
-        <br><a href="fivehighrate.php"> Hot Pot Party(siyi's company)</a><br>
-                <hr>
+<!--         <br><a href="fivehighrate.php"> Hot Pot Party(siyi's company)</a><br> -->
+<!--                 <hr> -->
                 
-		<br><a href="mostfive.php"> Taylor's Apartments(min's company)</a><br>
-        		<hr>
+<!-- 		<br><a href="mostfive.php"> Taylor's Apartments(min's company)</a><br> -->
+<!--         		<hr> -->
         		
-       	<br><a href="mostfive.php"> Computer products(fei's company)</a><br>
-        		<hr>
+<!--        	<br><a href="mostfive.php"> Computer products(fei's company)</a><br> -->
+<!--         		<hr> -->
         		
-        <br><a href="mostfive.php"> Chlorophytainc(wai's company)</a><br>
-        		<hr>
+<!--         <br><a href="mostfive.php"> Chlorophytainc(wai's company)</a><br> -->
+<!--         		<hr> -->
             
           </div>
         </div>
