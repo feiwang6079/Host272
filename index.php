@@ -60,6 +60,24 @@
         </div>
         <!-- Modal -->
         
+        <?php 
+            include 'config.php';
+            $sql = "select count(id) as count from market_current_user";
+            $result = mysqli_query($db, $sql);
+            $row = mysqli_fetch_assoc($result);
+            $count = $row['count'];
+            
+            if($count == 0)
+            {
+            }
+            else 
+            {
+                header("Location: allcompanies.php");
+            }
+        ?>
+        
+        
+        
         <!-- modal -->
       </form>
     </div>

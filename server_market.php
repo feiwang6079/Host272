@@ -42,6 +42,15 @@ if (isset($_POST['reg_user'])) {
     $_SESSION['username'] = $username;
     $_SESSION['success'] = "You are now logged in";
     
+    
+    
+    $sql = "insert into market_current_user(market_userid) values('$username')";
+    if($result = mysqli_query($db, $sql))
+    {}
+    else {
+        echo "error";
+    }
+    
     header('location: http://master.feiwang.tech/allcompanies.php');
   }
 }
@@ -66,6 +75,16 @@ if (isset($_POST['login_user'])) {
     if (mysqli_num_rows($results) == 1) {
       $_SESSION['username'] = $username;
       $_SESSION['success'] = "You are now logged in";
+      
+      $sql = "insert into market_current_user(market_userid) values('$username')";
+      if($result = mysqli_query($db, $sql))
+      {}
+      else {
+          echo "error";
+      }
+      
+      
+      
       header('location: http://master.feiwang.tech/allcompanies.php');
     }else {
       array_push($errors, "Wrong username/password combination");
