@@ -41,7 +41,7 @@
         <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
       </div>
       <!--logo start-->
-      <a href="#" class="logo"><b>281 Team<span>  Host Website</span></b></a>
+      <a href="#" class="logo"><b>272 Team<span>  MISCELLANEA MARKET PLACE</span></b></a>
       <!--logo end-->
 
     </header>
@@ -91,7 +91,8 @@
     <!--main content start-->
     <section id="main-content">
       <section class="wrapper site-min-height">
-        <h3><i class="fa fa-angle-right"></i> All Products</h3>
+        <h3><i class="fa fa-angle-right"></i> Browse record
+        </h3>
         <div class="row mt">
           <div class="col-lg-12">
           

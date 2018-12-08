@@ -41,7 +41,7 @@
         <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
       </div>
       <!--logo start-->
-      <a href="#" class="logo"><b>281 Team<span>  Host Website</span></b></a>
+      <a href="#" class="logo"><b>272 Team<span>  MISCELLANEA MARKET PLACE</span></b></a>
       <!--logo end-->
 
     </header>
