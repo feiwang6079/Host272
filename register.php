@@ -1,4 +1,4 @@
-<?php include('server.php') ?>
+<?php include('server_market.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,6 +31,34 @@
 </head>
 
 <body>
+  <!-- facebook login-->
+  <div id="fb-root"></div>
+  <!-- <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=383680055702229&autoLogAppEvents=1';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script> -->
+  <script>
+  (function(d, s, id) {
+    FB.init({
+      appId      : '735063520183061',
+      cookie     : true,  // 启用cookie
+      xfbml      : true,  // 解析此页面上的社交插件
+      version    : 'v2.8' // 使用图形api 2.8版本
+    });
+
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  window.fbAsyncInit = function() {
+    
+};
+</script>
   <!-- **********************************************************************************************************************************************************
       MAIN CONTENT
       *********************************************************************************************************************************************************** -->
@@ -53,6 +81,7 @@
           <div class="login-social-link centered">
             <p>or you can sign in via your social network</p>
             <button class="btn btn-facebook" type="submit"><i class="fa fa-facebook"></i> Facebook</button>
+            <!-- <div class="fb-login-button" data-size="medium" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="true" id="logina"></div> -->
             
           </div>
           <div class="registration">
@@ -79,6 +108,36 @@
       speed: 500
     });
   </script>
+
+  <!--facebook-->
+  <script>
+    FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+    });
+  // This is called with the results from from FB.getLoginStatus().
+  document.getElementById('logina').onclick = function(){//登录
+  FB.login(function(response) {
+      if (response.status === 'connected') {
+        FB.api('/me', function(response) {
+            console.log('Successful login for: ' + response.name);
+          });
+      } else {
+        console.log('该用户没有登录');
+      }
+    }, {scope: 'public_profile,email'});
+  };
+  </script>
+
+<!--
+  Below we include the Login Button social plugin. This button uses
+  the JavaScript SDK to present a graphical Login button that triggers
+  the FB.login() function when clicked.
+-->
+
+
+
+<div id="status">
+</div>
 </body>
 
 </html>
