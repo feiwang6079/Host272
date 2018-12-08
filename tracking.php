@@ -104,7 +104,6 @@
           while($row = mysqli_fetch_assoc($result))
           {
               $productName = $row['product_name'];
-//               $url = $row['product_url'];
               $name = $row['company_name'];
               $time = $row['time'];
               echo "<br> you watch $productName "."of ".$name." at ".$time."</a><br><hr>";
@@ -112,18 +111,6 @@
           }
 
 ?>
-            
-<!--         <br><a href="fivehighrate.php"> Hot Pot Party(siyi's company)</a><br> -->
-<!--                 <hr> -->
-                
-<!-- 		<br><a href="mostfive.php"> Taylor's Apartments(min's company)</a><br> -->
-<!--         		<hr> -->
-        		
-<!--        	<br><a href="mostfive.php"> Computer products(fei's company)</a><br> -->
-<!--         		<hr> -->
-        		
-<!--         <br><a href="mostfive.php"> Chlorophytainc(wai's company)</a><br> -->
-<!--         		<hr> -->
             
           </div>
         </div>
