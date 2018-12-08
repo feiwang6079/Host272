@@ -44,7 +44,14 @@
       <a href="#" class="logo"><b>272 Team<span>  MISCELLANEA MARKET PLACE</span></b></a>
       <!--logo end-->
 
+        <div class="top-menu">
+        <ul class="nav pull-right top-menu">
+        <li><a class="logout" href="logout.php">Logout</a></li>
+        </ul>
+        </div>
     </header>
+       
+
     <!--header end-->
     <!-- **********************************************************************************************************************************************************
         MAIN SIDEBAR MENU
